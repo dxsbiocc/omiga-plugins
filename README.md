@@ -43,8 +43,8 @@ python3 scripts/validate_marketplace.py
 
 ## After uploading to GitHub
 
-1. Replace `<owner>` in `marketplace.remote.example.json`.
-2. Copy the `remote` object into `marketplace.json`.
+1. `marketplace.json` already points at `dxsbiocc/omiga-plugins`; adjust it only if you fork or transfer the repo.
+2. Use the raw GitHub URL from the `remote` object for Omiga update checks.
 3. Tag plugin-compatible releases, for example `marketplace-v0.1.0`.
 4. Omiga can then run remote marketplace update checks against the raw GitHub URL.
 

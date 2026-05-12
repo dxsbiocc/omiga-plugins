@@ -16,9 +16,9 @@ Use GitHub raw content first:
 {
   "remote": {
     "provider": "github",
-    "url": "https://raw.githubusercontent.com/<owner>/omiga-plugins/main/marketplace.json",
-    "repositoryUrl": "https://github.com/<owner>/omiga-plugins",
-    "changelogUrl": "https://github.com/<owner>/omiga-plugins/releases"
+    "url": "https://raw.githubusercontent.com/dxsbiocc/omiga-plugins/main/marketplace.json",
+    "repositoryUrl": "https://github.com/dxsbiocc/omiga-plugins",
+    "changelogUrl": "https://github.com/dxsbiocc/omiga-plugins/releases"
   }
 }
 ```
