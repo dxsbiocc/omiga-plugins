@@ -8,7 +8,7 @@
       "name": "transcriptomics",
       "source": {
         "source": "local",
-        "path": "./plugins/transcriptomics"
+        "path": "./plugins/analysis/transcriptomics"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -20,7 +20,7 @@
       "name": "operator-seqtk",
       "source": {
         "source": "local",
-        "path": "./plugins/operator-seqtk"
+        "path": "./plugins/bioinformatics/operator-seqtk"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -32,7 +32,7 @@
       "name": "visualization-r",
       "source": {
         "source": "local",
-        "path": "./plugins/visualization-r"
+        "path": "./plugins/visualization/visualization-r"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -44,7 +44,7 @@
       "name": "source-ncbi",
       "source": {
         "source": "local",
-        "path": "./plugins/source-ncbi"
+        "path": "./plugins/sources/source-ncbi"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -56,7 +56,7 @@
       "name": "source-embl-ebi",
       "source": {
         "source": "local",
-        "path": "./plugins/source-embl-ebi"
+        "path": "./plugins/sources/source-embl-ebi"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -68,7 +68,7 @@
       "name": "retrieval-dataset-gtex",
       "source": {
         "source": "local",
-        "path": "./plugins/retrieval-dataset-gtex"
+        "path": "./plugins/sources/retrieval-dataset-gtex"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -80,7 +80,7 @@
       "name": "retrieval-dataset-cbioportal",
       "source": {
         "source": "local",
-        "path": "./plugins/retrieval-dataset-cbioportal"
+        "path": "./plugins/sources/retrieval-dataset-cbioportal"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -92,7 +92,7 @@
       "name": "retrieval-literature-semantic-scholar",
       "source": {
         "source": "local",
-        "path": "./plugins/retrieval-literature-semantic-scholar"
+        "path": "./plugins/sources/retrieval-literature-semantic-scholar"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -104,7 +104,7 @@
       "name": "retrieval-knowledge-uniprot",
       "source": {
         "source": "local",
-        "path": "./plugins/retrieval-knowledge-uniprot"
+        "path": "./plugins/sources/retrieval-knowledge-uniprot"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -116,7 +116,7 @@
       "name": "omiga-developer-tools",
       "source": {
         "source": "local",
-        "path": "./plugins/omiga-developer-tools"
+        "path": "./plugins/tools/omiga-developer-tools"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -128,7 +128,7 @@
       "name": "ngs-alignment",
       "source": {
         "source": "local",
-        "path": "./plugins/ngs-alignment"
+        "path": "./plugins/bioinformatics/ngs-alignment"
       },
       "policy": {
         "installation": "AVAILABLE",

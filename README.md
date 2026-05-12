@@ -7,7 +7,12 @@ Curated Omiga plugin marketplace. This repository is intended to become the remo
 ```text
 marketplace.json                 # local/static marketplace manifest
 marketplace.remote.example.json  # GitHub remote metadata example
-plugins/                         # plugin packages
+plugins/                         # plugin packages grouped by official domain
+  analysis/
+  bioinformatics/
+  visualization/
+  sources/
+  tools/
 source_runners/                  # shared retrieval/source runner code
 schemas/                         # lightweight JSON schemas
 scripts/                         # validation and sync helpers
@@ -16,15 +21,17 @@ docs/                            # marketplace operating notes
 
 ## Included initial plugins
 
-- `transcriptomics` — analysis templates for differential expression, PCA, enrichment
-- `ngs-alignment` — NGS alignment/post-alignment operators
-- `source-ncbi` — aggregated NCBI source routes
-- `source-embl-ebi` — EMBL-EBI source routes
-- `visualization-r` — R visualization templates
-- `operator-seqtk` — FASTQ/FASTA subsampling operator
-- `retrieval-dataset-gtex`, `retrieval-dataset-cbioportal`
-- `retrieval-literature-semantic-scholar`, `retrieval-knowledge-uniprot`
-- `omiga-developer-tools` — developer skills such as plugin creation
+Official plugins are grouped by physical domain folder while keeping stable plugin IDs from `marketplace.json`:
+
+- `plugins/analysis/transcriptomics` — analysis templates for differential expression, PCA, enrichment
+- `plugins/bioinformatics/ngs-alignment` — NGS alignment/post-alignment operators
+- `plugins/bioinformatics/operator-seqtk` — FASTQ/FASTA subsampling operator
+- `plugins/visualization/visualization-r` — R visualization templates
+- `plugins/sources/source-ncbi` — aggregated NCBI source routes
+- `plugins/sources/source-embl-ebi` — EMBL-EBI source routes
+- `plugins/sources/retrieval-dataset-gtex`, `plugins/sources/retrieval-dataset-cbioportal`
+- `plugins/sources/retrieval-literature-semantic-scholar`, `plugins/sources/retrieval-knowledge-uniprot`
+- `plugins/tools/omiga-developer-tools` — developer skills such as plugin creation
 
 `computer-use` intentionally remains in the Omiga app repository because it contains platform-specific automation binaries and tighter app/security coupling.
 

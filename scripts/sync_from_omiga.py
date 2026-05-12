@@ -4,19 +4,19 @@ import argparse
 import shutil
 from pathlib import Path
 
-PLUGIN_NAMES = [
-    "transcriptomics",
-    "operator-seqtk",
-    "visualization-r",
-    "source-ncbi",
-    "source-embl-ebi",
-    "retrieval-dataset-gtex",
-    "retrieval-dataset-cbioportal",
-    "retrieval-literature-semantic-scholar",
-    "retrieval-knowledge-uniprot",
-    "omiga-developer-tools",
-    "ngs-alignment",
-]
+PLUGIN_PATHS = {
+    "transcriptomics": "analysis/transcriptomics",
+    "operator-seqtk": "bioinformatics/operator-seqtk",
+    "visualization-r": "visualization/visualization-r",
+    "source-ncbi": "sources/source-ncbi",
+    "source-embl-ebi": "sources/source-embl-ebi",
+    "retrieval-dataset-gtex": "sources/retrieval-dataset-gtex",
+    "retrieval-dataset-cbioportal": "sources/retrieval-dataset-cbioportal",
+    "retrieval-literature-semantic-scholar": "sources/retrieval-literature-semantic-scholar",
+    "retrieval-knowledge-uniprot": "sources/retrieval-knowledge-uniprot",
+    "omiga-developer-tools": "tools/omiga-developer-tools",
+    "ngs-alignment": "bioinformatics/ngs-alignment",
+}
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store", "target", "node_modules")
 
 
@@ -29,9 +29,9 @@ def main() -> None:
     bundled = omiga / "src-tauri" / "bundled_plugins"
     if not bundled.is_dir():
         raise SystemExit(f"not an Omiga bundled_plugins directory: {bundled}")
-    for name in PLUGIN_NAMES:
+    for name, relative in PLUGIN_PATHS.items():
         src = bundled / "plugins" / name
-        dst = root / "plugins" / name
+        dst = root / "plugins" / relative
         if not src.is_dir():
             raise SystemExit(f"missing plugin: {src}")
         if dst.exists():

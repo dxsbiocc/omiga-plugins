@@ -4,6 +4,24 @@
 
 This repo is the external marketplace source for Omiga plugins. The app repo may keep a stable bundled snapshot for offline bootstrap, but plugin development, changelogs, and release cadence should live here once the plugin API is stable enough.
 
+
+## Official directory taxonomy
+
+Official plugins should live under domain folders:
+
+```text
+plugins/analysis/        # analysis workflows/templates by omics domain
+plugins/bioinformatics/  # NGS, alignment, QC, variant, annotation, and related operators
+plugins/visualization/   # figure/template plugins
+plugins/sources/         # retrieval/source/provider plugins
+plugins/tools/           # developer or meta-tooling plugins
+```
+
+The folder path is packaging/navigation metadata only. Plugin identity remains
+`<plugin.name>@<marketplace.name>` from `marketplace.json`, so moving a plugin
+between domain folders does not rename installed plugin IDs as long as the
+marketplace entry `name` stays unchanged.
+
 ## Marketplace naming
 
 The manifest currently uses `omiga-curated` so plugin ids remain compatible with the bundled curated marketplace. For local side-by-side experiments, temporarily change `name` to `omiga-curated-dev`; do not publish that name unless you intentionally want separate plugin ids.
