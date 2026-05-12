@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omiga.local/schemas/marketplace.schema.json",
+  "title": "Omiga plugin marketplace",
+  "type": "object",
+  "required": [
+    "name",
+    "plugins"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interface": {
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "remote": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "repositoryUrl": {
+          "type": "string"
+        },
+        "changelogUrl": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "source"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "path"
+            ],
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "policy": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

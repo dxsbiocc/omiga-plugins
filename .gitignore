@@ -1,0 +1,29 @@
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Runtime output
+.omiga/
+dist/
+build/
+tmp/
+
+# Large local data should not be committed
+*.bam
+*.sam
+*.cram
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fasta
+*.fa
+*.gtf
+*.gff
+*.sif
