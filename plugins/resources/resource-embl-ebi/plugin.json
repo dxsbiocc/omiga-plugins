@@ -1,5 +1,5 @@
 {
-  "name": "source-embl-ebi",
+  "name": "resource-embl-ebi",
   "version": "0.1.0",
   "description": "Aggregates EMBL-EBI public dataset and knowledge retrieval routes behind one Source plugin while each route remains independently addressable.",
   "retrieval": {
@@ -9,7 +9,7 @@
       "args": [],
       "env": {
         "OMIGA_RETRIEVAL_SOURCE_IDS": "ena,ena_run,ena_experiment,ena_sample,ena_analysis,ena_assembly,ena_sequence,arrayexpress,ensembl",
-        "OMIGA_RETRIEVAL_PLUGIN_NAME": "source-embl-ebi",
+        "OMIGA_RETRIEVAL_PLUGIN_NAME": "resource-embl-ebi",
         "OMIGA_RETRIEVAL_RUNNERS": "public_dataset_sources.py,public_knowledge_sources.py"
       },
       "cwd": ".",
@@ -18,7 +18,7 @@
       "cancelGraceMs": 750,
       "concurrency": 1
     },
-    "sources": [
+    "resources": [
       {
         "id": "ena",
         "category": "dataset",

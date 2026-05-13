@@ -11,7 +11,7 @@ plugins/                         # plugin packages grouped by official domain
   bioinformatics/
   visualization/
   resources/
-source_runners/                  # shared retrieval resource runner code
+resource_runners/                  # shared retrieval resource runner code
 schemas/                         # lightweight JSON schemas
 scripts/                         # validation and sync helpers
 docs/                            # marketplace operating notes
@@ -25,8 +25,8 @@ Official plugins are grouped by physical domain folder while keeping stable plug
 - `plugins/bioinformatics/ngs-alignment` — NGS alignment/post-alignment operators
 - `plugins/bioinformatics/operator-seqtk` — FASTQ/FASTA subsampling operator
 - `plugins/visualization/visualization-r` — R visualization templates
-- `plugins/resources/source-ncbi` — aggregated NCBI retrieval resource routes
-- `plugins/resources/source-embl-ebi` — EMBL-EBI retrieval resource routes
+- `plugins/resources/resource-ncbi` — aggregated NCBI retrieval resource routes
+- `plugins/resources/resource-embl-ebi` — EMBL-EBI retrieval resource routes
 - `plugins/resources/retrieval-dataset-gtex`, `plugins/resources/retrieval-dataset-cbioportal`
 - `plugins/resources/retrieval-literature-semantic-scholar`, `plugins/resources/retrieval-knowledge-uniprot`
 

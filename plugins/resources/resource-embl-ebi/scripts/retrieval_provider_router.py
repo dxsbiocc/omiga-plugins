@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Provider-level router for aggregated Omiga retrieval source plugins."""
+"""Provider-level router for aggregated Omiga retrieval resource plugins."""
 
 from __future__ import annotations
 
@@ -24,10 +24,11 @@ def error(message_id: str, code: str, message: str) -> Dict[str, Any]:
 def find_runner(filename: str) -> Path:
     here = Path(__file__).resolve()
     for parent in here.parents:
-        candidate = parent / "source_runners" / filename
-        if candidate.is_file():
-            return candidate
-    raise FileNotFoundError(f"source runner {filename} not found near {here}")
+        for directory in ("resource_runners", "source_runners"):
+            candidate = parent / directory / filename
+            if candidate.is_file():
+                return candidate
+    raise FileNotFoundError(f"resource runner {filename} not found near {here}")
 
 
 def load_runner(filename: str):
@@ -35,7 +36,7 @@ def load_runner(filename: str):
     module_name = f"omiga_{path.stem}_{abs(hash(str(path)))}"
     spec = importlib.util.spec_from_file_location(module_name, path)
     if spec is None or spec.loader is None:
-        raise RuntimeError(f"could not load source runner {path}")
+        raise RuntimeError(f"could not load resource runner {path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -94,7 +95,7 @@ def main() -> int:
         message_type = message.get("type")
         message_id = str(message.get("id", message_type or "unknown"))
         if message_type == "initialize":
-            write({"id": message_id, "type": "initialized", "protocolVersion": PROTOCOL_VERSION, "sources": configured_sources()})
+            write({"id": message_id, "type": "initialized", "protocolVersion": PROTOCOL_VERSION, "resources": configured_sources()})
         elif message_type == "execute":
             write(handle_execute(message))
         elif message_type == "shutdown":

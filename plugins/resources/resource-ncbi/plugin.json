@@ -1,5 +1,5 @@
 {
-  "name": "source-ncbi",
+  "name": "resource-ncbi",
   "version": "0.1.0",
   "description": "Aggregates NCBI public literature, dataset, and gene retrieval routes behind one Source plugin while each route remains independently addressable.",
   "retrieval": {
@@ -9,7 +9,7 @@
       "args": [],
       "env": {
         "OMIGA_RETRIEVAL_SOURCE_IDS": "pubmed,geo,biosample,ncbi_datasets,ncbi_gene",
-        "OMIGA_RETRIEVAL_PLUGIN_NAME": "source-ncbi",
+        "OMIGA_RETRIEVAL_PLUGIN_NAME": "resource-ncbi",
         "OMIGA_RETRIEVAL_RUNNERS": "public_literature_sources.py,public_dataset_sources.py,public_knowledge_sources.py"
       },
       "cwd": ".",
@@ -18,7 +18,7 @@
       "cancelGraceMs": 750,
       "concurrency": 1
     },
-    "sources": [
+    "resources": [
       {
         "id": "pubmed",
         "category": "literature",

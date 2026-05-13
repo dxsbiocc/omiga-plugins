@@ -1013,7 +1013,7 @@ def main() -> int:
         message_type = message.get("type")
         message_id = str(message.get("id", message_type or "unknown"))
         if message_type == "initialize":
-            write({"id": message_id, "type": "initialized", "protocolVersion": PROTOCOL_VERSION, "sources": configured_sources()})
+            write({"id": message_id, "type": "initialized", "protocolVersion": PROTOCOL_VERSION, "resources": configured_sources()})
         elif message_type == "execute":
             write(handle_execute(message))
         elif message_type == "shutdown":

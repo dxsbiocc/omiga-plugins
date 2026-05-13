@@ -8,8 +8,8 @@ PLUGIN_PATHS = {
     "transcriptomics": "bioinformatics/transcriptomics",
     "operator-seqtk": "bioinformatics/operator-seqtk",
     "visualization-r": "visualization/visualization-r",
-    "source-ncbi": "resources/source-ncbi",
-    "source-embl-ebi": "resources/source-embl-ebi",
+    "resource-ncbi": "resources/resource-ncbi",
+    "resource-embl-ebi": "resources/resource-embl-ebi",
     "retrieval-dataset-gtex": "resources/retrieval-dataset-gtex",
     "retrieval-dataset-cbioportal": "resources/retrieval-dataset-cbioportal",
     "retrieval-literature-semantic-scholar": "resources/retrieval-literature-semantic-scholar",
@@ -37,13 +37,13 @@ def main() -> None:
             shutil.rmtree(dst)
         shutil.copytree(src, dst, ignore=IGNORE)
         print(f"synced plugins/{name}")
-    source_runners = bundled / "source_runners"
+    source_runners = bundled / "resource_runners"
     if source_runners.is_dir():
-        dst = root / "source_runners"
+        dst = root / "resource_runners"
         if dst.exists():
             shutil.rmtree(dst)
         shutil.copytree(source_runners, dst, ignore=IGNORE)
-        print("synced source_runners")
+        print("synced resource_runners")
 
 
 if __name__ == "__main__":

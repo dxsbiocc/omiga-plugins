@@ -43,7 +43,7 @@ A static GitHub repository is enough while marketplace operations are: list, ins
 
 ## Resource folder naming
 
-Official external database, literature, and knowledge providers live under `plugins/resources/`. Omiga runtime APIs still use the term retrieval source/data source for route identifiers, so marketplace plugin IDs and `category: "Retrieval"` remain stable for compatibility.
+Official external database, literature, and knowledge providers live under `plugins/resources/`. Omiga runtime APIs still use the term retrieval resource/route for route identifiers, so marketplace plugin IDs and `category: "Retrieval"` remain stable for compatibility.
 
 ## Bootstrap tooling
 

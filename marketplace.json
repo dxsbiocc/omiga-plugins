@@ -41,10 +41,10 @@
       "category": "Visualization"
     },
     {
-      "name": "source-ncbi",
+      "name": "resource-ncbi",
       "source": {
         "source": "local",
-        "path": "./plugins/resources/source-ncbi"
+        "path": "./plugins/resources/resource-ncbi"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -53,10 +53,10 @@
       "category": "Retrieval"
     },
     {
-      "name": "source-embl-ebi",
+      "name": "resource-embl-ebi",
       "source": {
         "source": "local",
-        "path": "./plugins/resources/source-embl-ebi"
+        "path": "./plugins/resources/resource-embl-ebi"
       },
       "policy": {
         "installation": "AVAILABLE",
