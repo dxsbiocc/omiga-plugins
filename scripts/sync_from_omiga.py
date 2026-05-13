@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 
 PLUGIN_PATHS = {
-    "transcriptomics": "analysis/transcriptomics",
+    "transcriptomics": "bioinformatics/transcriptomics",
     "operator-seqtk": "bioinformatics/operator-seqtk",
     "visualization-r": "visualization/visualization-r",
     "source-ncbi": "sources/source-ncbi",

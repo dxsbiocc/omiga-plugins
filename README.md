@@ -8,7 +8,6 @@ Curated Omiga plugin marketplace. This repository is intended to become the remo
 marketplace.json                 # local/static marketplace manifest
 marketplace.remote.example.json  # GitHub remote metadata example
 plugins/                         # plugin packages grouped by official domain
-  analysis/
   bioinformatics/
   visualization/
   sources/
@@ -23,7 +22,7 @@ docs/                            # marketplace operating notes
 
 Official plugins are grouped by physical domain folder while keeping stable plugin IDs from `marketplace.json`:
 
-- `plugins/analysis/transcriptomics` — analysis templates for differential expression, PCA, enrichment
+- `plugins/bioinformatics/transcriptomics` — transcriptomics analysis templates for differential expression, PCA, enrichment
 - `plugins/bioinformatics/ngs-alignment` — NGS alignment/post-alignment operators
 - `plugins/bioinformatics/operator-seqtk` — FASTQ/FASTA subsampling operator
 - `plugins/visualization/visualization-r` — R visualization templates

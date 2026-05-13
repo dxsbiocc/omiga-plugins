@@ -8,13 +8,13 @@
       "name": "transcriptomics",
       "source": {
         "source": "local",
-        "path": "./plugins/analysis/transcriptomics"
+        "path": "./plugins/bioinformatics/transcriptomics"
       },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_USE"
       },
-      "category": "Analysis"
+      "category": "Bioinformatics"
     },
     {
       "name": "operator-seqtk",

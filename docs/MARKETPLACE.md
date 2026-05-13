@@ -7,11 +7,10 @@ This repo is the external marketplace source for Omiga plugins. The app repo may
 
 ## Official directory taxonomy
 
-Official plugins should live under domain folders:
+Official plugins should live under domain folders. Omics analysis plugins such as transcriptomics belong under `bioinformatics/`, not a generic `analysis/` bucket:
 
 ```text
-plugins/analysis/        # analysis workflows/templates by omics domain
-plugins/bioinformatics/  # NGS, alignment, QC, variant, annotation, and related operators
+plugins/bioinformatics/  # omics analysis, NGS, alignment, QC, variant, annotation, and related operators
 plugins/visualization/   # figure/template plugins
 plugins/sources/         # retrieval/source/provider plugins
 plugins/tools/           # developer or meta-tooling plugins
