@@ -9,8 +9,7 @@
       "args": [],
       "env": {
         "OMIGA_RETRIEVAL_SOURCE_IDS": "ena,ena_run,ena_experiment,ena_sample,ena_analysis,ena_assembly,ena_sequence,arrayexpress,ensembl",
-        "OMIGA_RETRIEVAL_PLUGIN_NAME": "resource-embl-ebi",
-        "OMIGA_RETRIEVAL_RUNNERS": "public_dataset_sources.py,public_knowledge_sources.py"
+        "OMIGA_RETRIEVAL_PLUGIN_NAME": "resource-embl-ebi"
       },
       "cwd": ".",
       "idleTtlMs": 60000,

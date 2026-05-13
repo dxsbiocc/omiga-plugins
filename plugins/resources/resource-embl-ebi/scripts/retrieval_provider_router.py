@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Provider-level router for aggregated Omiga retrieval resource plugins."""
+"""Plugin-local router for an aggregated Omiga retrieval resource plugin."""
 
 from __future__ import annotations
 
 from pathlib import Path
 import importlib.util
 import json
-import os
 import sys
 from typing import Any, Dict, List
 
 PROTOCOL_VERSION = 1
+RUNNER_FILES = ['embl_dataset_sources.py', 'embl_knowledge_sources.py']
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 
 def write(message: Dict[str, Any]) -> None:
@@ -21,18 +22,10 @@ def error(message_id: str, code: str, message: str) -> Dict[str, Any]:
     return {"id": message_id, "type": "error", "error": {"code": code, "message": message}}
 
 
-def find_runner(filename: str) -> Path:
-    here = Path(__file__).resolve()
-    for parent in here.parents:
-        for directory in ("resource_runners", "source_runners"):
-            candidate = parent / directory / filename
-            if candidate.is_file():
-                return candidate
-    raise FileNotFoundError(f"resource runner {filename} not found near {here}")
-
-
 def load_runner(filename: str):
-    path = find_runner(filename)
+    path = SCRIPT_DIR / filename
+    if not path.is_file():
+        raise FileNotFoundError(f"plugin-local resource runner {filename} not found under {SCRIPT_DIR}")
     module_name = f"omiga_{path.stem}_{abs(hash(str(path)))}"
     spec = importlib.util.spec_from_file_location(module_name, path)
     if spec is None or spec.loader is None:
@@ -42,12 +35,7 @@ def load_runner(filename: str):
     return module
 
 
-def runner_files() -> List[str]:
-    raw = os.environ.get("OMIGA_RETRIEVAL_RUNNERS", "")
-    return [item.strip() for item in raw.split(",") if item.strip()]
-
-
-RUNNERS = [load_runner(filename) for filename in runner_files()]
+RUNNERS = [load_runner(filename) for filename in RUNNER_FILES]
 
 
 def configured_sources() -> List[Dict[str, Any]]:

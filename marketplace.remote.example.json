@@ -65,6 +65,18 @@
       "category": "Retrieval"
     },
     {
+      "name": "resource-drugs",
+      "source": {
+        "source": "local",
+        "path": "./plugins/resources/resource-drugs"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Retrieval"
+    },
+    {
       "name": "retrieval-dataset-gtex",
       "source": {
         "source": "local",

@@ -4,16 +4,12 @@ import argparse
 import shutil
 from pathlib import Path
 
+# Resource plugins are authored in this repository so their runners stay plugin-local.
+# Do not sync them back from Omiga's app bundle, which may be an older bootstrap snapshot.
 PLUGIN_PATHS = {
     "transcriptomics": "bioinformatics/transcriptomics",
     "operator-seqtk": "bioinformatics/operator-seqtk",
     "visualization-r": "visualization/visualization-r",
-    "resource-ncbi": "resources/resource-ncbi",
-    "resource-embl-ebi": "resources/resource-embl-ebi",
-    "retrieval-dataset-gtex": "resources/retrieval-dataset-gtex",
-    "retrieval-dataset-cbioportal": "resources/retrieval-dataset-cbioportal",
-    "retrieval-literature-semantic-scholar": "resources/retrieval-literature-semantic-scholar",
-    "retrieval-knowledge-uniprot": "resources/retrieval-knowledge-uniprot",
     "ngs-alignment": "bioinformatics/ngs-alignment",
 }
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store", "target", "node_modules")
@@ -37,13 +33,6 @@ def main() -> None:
             shutil.rmtree(dst)
         shutil.copytree(src, dst, ignore=IGNORE)
         print(f"synced plugins/{name}")
-    source_runners = bundled / "resource_runners"
-    if source_runners.is_dir():
-        dst = root / "resource_runners"
-        if dst.exists():
-            shutil.rmtree(dst)
-        shutil.copytree(source_runners, dst, ignore=IGNORE)
-        print("synced resource_runners")
 
 
 if __name__ == "__main__":
