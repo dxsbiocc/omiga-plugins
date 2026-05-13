@@ -13,7 +13,6 @@ Official plugins should live under domain folders. Omics analysis plugins such a
 plugins/bioinformatics/  # omics analysis, NGS, alignment, QC, variant, annotation, and related operators
 plugins/visualization/   # figure/template plugins
 plugins/sources/         # retrieval/source/provider plugins
-plugins/tools/           # developer or meta-tooling plugins
 ```
 
 The folder path is packaging/navigation metadata only. Plugin identity remains
@@ -41,6 +40,10 @@ Use GitHub raw content first:
 ```
 
 A static GitHub repository is enough while marketplace operations are: list, install from source, sync, force overwrite, changelog preview, and remote update check. Move to an independent service only when you need accounts, paid plugins, ratings, search ranking, signatures, telemetry, or compatibility APIs.
+
+## Bootstrap tooling
+
+`plugin-creator` and similar marketplace-authoring skills should stay built into the Omiga app/tooling layer. They are not ordinary marketplace plugins because users need them before a marketplace is installed, and uninstalling them should not break plugin authoring.
 
 ## Version policy
 

@@ -14,7 +14,6 @@ PLUGIN_PATHS = {
     "retrieval-dataset-cbioportal": "sources/retrieval-dataset-cbioportal",
     "retrieval-literature-semantic-scholar": "sources/retrieval-literature-semantic-scholar",
     "retrieval-knowledge-uniprot": "sources/retrieval-knowledge-uniprot",
-    "omiga-developer-tools": "tools/omiga-developer-tools",
     "ngs-alignment": "bioinformatics/ngs-alignment",
 }
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store", "target", "node_modules")
