@@ -10,8 +10,8 @@ marketplace.remote.example.json  # GitHub remote metadata example
 plugins/                         # plugin packages grouped by official domain
   bioinformatics/
   visualization/
-  sources/
-source_runners/                  # shared retrieval/source runner code
+  resources/
+source_runners/                  # shared retrieval resource runner code
 schemas/                         # lightweight JSON schemas
 scripts/                         # validation and sync helpers
 docs/                            # marketplace operating notes
@@ -25,10 +25,10 @@ Official plugins are grouped by physical domain folder while keeping stable plug
 - `plugins/bioinformatics/ngs-alignment` — NGS alignment/post-alignment operators
 - `plugins/bioinformatics/operator-seqtk` — FASTQ/FASTA subsampling operator
 - `plugins/visualization/visualization-r` — R visualization templates
-- `plugins/sources/source-ncbi` — aggregated NCBI source routes
-- `plugins/sources/source-embl-ebi` — EMBL-EBI source routes
-- `plugins/sources/retrieval-dataset-gtex`, `plugins/sources/retrieval-dataset-cbioportal`
-- `plugins/sources/retrieval-literature-semantic-scholar`, `plugins/sources/retrieval-knowledge-uniprot`
+- `plugins/resources/source-ncbi` — aggregated NCBI retrieval resource routes
+- `plugins/resources/source-embl-ebi` — EMBL-EBI retrieval resource routes
+- `plugins/resources/retrieval-dataset-gtex`, `plugins/resources/retrieval-dataset-cbioportal`
+- `plugins/resources/retrieval-literature-semantic-scholar`, `plugins/resources/retrieval-knowledge-uniprot`
 
 `computer-use` intentionally remains in the Omiga app repository because it contains platform-specific automation binaries and tighter app/security coupling. `plugin-creator`/developer tooling is also kept in the Omiga app as a built-in bootstrap skill rather than a marketplace plugin.
 

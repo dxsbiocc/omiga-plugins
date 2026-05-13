@@ -8,12 +8,12 @@ PLUGIN_PATHS = {
     "transcriptomics": "bioinformatics/transcriptomics",
     "operator-seqtk": "bioinformatics/operator-seqtk",
     "visualization-r": "visualization/visualization-r",
-    "source-ncbi": "sources/source-ncbi",
-    "source-embl-ebi": "sources/source-embl-ebi",
-    "retrieval-dataset-gtex": "sources/retrieval-dataset-gtex",
-    "retrieval-dataset-cbioportal": "sources/retrieval-dataset-cbioportal",
-    "retrieval-literature-semantic-scholar": "sources/retrieval-literature-semantic-scholar",
-    "retrieval-knowledge-uniprot": "sources/retrieval-knowledge-uniprot",
+    "source-ncbi": "resources/source-ncbi",
+    "source-embl-ebi": "resources/source-embl-ebi",
+    "retrieval-dataset-gtex": "resources/retrieval-dataset-gtex",
+    "retrieval-dataset-cbioportal": "resources/retrieval-dataset-cbioportal",
+    "retrieval-literature-semantic-scholar": "resources/retrieval-literature-semantic-scholar",
+    "retrieval-knowledge-uniprot": "resources/retrieval-knowledge-uniprot",
     "ngs-alignment": "bioinformatics/ngs-alignment",
 }
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store", "target", "node_modules")

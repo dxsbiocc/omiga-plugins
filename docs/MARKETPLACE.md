@@ -12,7 +12,7 @@ Official plugins should live under domain folders. Omics analysis plugins such a
 ```text
 plugins/bioinformatics/  # omics analysis, NGS, alignment, QC, variant, annotation, and related operators
 plugins/visualization/   # figure/template plugins
-plugins/sources/         # retrieval/source/provider plugins
+plugins/resources/       # external database, literature, and knowledge-resource plugins
 ```
 
 The folder path is packaging/navigation metadata only. Plugin identity remains
@@ -40,6 +40,10 @@ Use GitHub raw content first:
 ```
 
 A static GitHub repository is enough while marketplace operations are: list, install from source, sync, force overwrite, changelog preview, and remote update check. Move to an independent service only when you need accounts, paid plugins, ratings, search ranking, signatures, telemetry, or compatibility APIs.
+
+## Resource folder naming
+
+Official external database, literature, and knowledge providers live under `plugins/resources/`. Omiga runtime APIs still use the term retrieval source/data source for route identifiers, so marketplace plugin IDs and `category: "Retrieval"` remain stable for compatibility.
 
 ## Bootstrap tooling
 
